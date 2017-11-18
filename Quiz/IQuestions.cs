@@ -10,7 +10,10 @@ namespace Quiz
         String Category { get; set; }
         String GetQuestion { get; set; }
         String GetAnswer { get; set; }
-       
-        
+        void SetQuestion();
+        String SetAnswer(string getal);
+
+
+
     }
 }

@@ -63,20 +63,47 @@ namespace Quiz
 
             foreach (var i in Selectedquestions)
             {
-                Console.WriteLine(i.GetQuestion);
 
-                var answer = Console.ReadLine();
+                if (i.GetType() == typeof(ChoiceQuestion))
+                {
+                    i.SetQuestion();
+                    var answer = Console.ReadLine();
+                    var returned = i.SetAnswer(answer);
 
-                if (answer.Equals(i.GetAnswer))
-                {
-                    Console.WriteLine("Correct");
+                    if (returned.Equals(i.GetAnswer))
+                    {
+                        Console.WriteLine("Correct");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect");
+                        Console.WriteLine(i.GetAnswer);
+                    }
+                    Console.WriteLine();
+
                 }
-                else
+                if (i.GetType() == typeof(OpenQuestion))
                 {
-                    Console.WriteLine("Incorrect");
-                    Console.WriteLine(i.GetAnswer);
+                    Console.WriteLine(i.GetQuestion);
+
+                    var answer = Console.ReadLine();
+
+                    if (answer.Equals(i.GetAnswer))
+                    {
+                        Console.WriteLine("Correct");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect");
+                        Console.WriteLine(i.GetAnswer);
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
+
+
+
+
+               
             }
            
         }
