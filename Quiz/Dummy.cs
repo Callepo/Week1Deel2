@@ -44,10 +44,19 @@ namespace Quiz
                 GetQuestion = "Hoeveel poten heeft een hond?",
                 GetAnswer = "4"
             };
+            OpenQuestion zesde = new OpenQuestion()
+            {
+                Moeilijkheidsgraad = 3,
+                Category = "dingen",
+                GetQuestion = "Hoeveel meters is 1 km?",
+                GetAnswer = "1000"
+            };
             questions.Add(first);
             questions.Add(tweede);
             questions.Add(derde);
             questions.Add(vierde);
+            questions.Add(vijfde);
+            questions.Add(zesde);
         }
 
         public List<IQuestions> GetList()
