@@ -37,6 +37,13 @@ namespace Quiz
                 GetQuestion = "Op welke locatie zit je op school?",
                 GetAnswer = "den haag"
             };
+            OpenQuestion vijfde = new OpenQuestion()
+            {
+                Moeilijkheidsgraad = 2,
+                Category = "dieren",
+                GetQuestion = "Hoeveel poten heeft een hond?",
+                GetAnswer = "4"
+            };
             questions.Add(first);
             questions.Add(tweede);
             questions.Add(derde);
